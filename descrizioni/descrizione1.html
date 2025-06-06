@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Descrizione Prodotto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dettagli Prodotto</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pagine/prodotti.html">Prodotti</a>
+        <a href="../pagine/offerte.html">Offerte</a>
+        <a href="../pagine/carrello.html">Carrello</a>
+        <a href="../pagine/contatti.html">Contatti</a>
+    </nav>
+
+    <main>
+        <section class="intro-section">
+            <p>Scopri tutte le informazioni su questo prodotto selezionato per te.</p>
+        </section>
+
+        <section class="product-detail">
+            <div class="product-image">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FMT_WHH?wid=750&hei=556&fmt=jpeg&qlt=90&.v=1724041668836"
+                    alt="Prodotto Dettaglio">
+            </div>
+
+            <div class="product-info">
+                <h2>AirPods Pro 2</h2>
+                <p class="price">€109.99</p>
+                <ul class="class-description">
+                    <li>Chip Apple H1 per connessione rapida e stabile</li>
+                    <li>Comando vocale “Ehi Siri” sempre attivo</li>
+                    <li>Fino a 5 ore di ascolto con una sola ricarica</li>
+                    <li>Fino a 24 ore di autonomia con custodia di ricarica</li>
+                    <li>Audio di alta qualità con equalizzazione adattiva</li>
+                    <li>Connessione automatica a tutti i tuoi dispositivi Apple</li>
+                    <li>Design leggero e confortevole</li>
+                    <li>Compatibili con iOS, iPadOS, macOS e Apple Watch</li>
+                </ul>
+                <button onclick="aggiungiAlCarrello('Nome del Prodotto', 49.99)">Aggiungi al carrello</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Il Tuo Shop. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        function aggiungiAlCarrello(nome, prezzo) {
+            let carrello = JSON.parse(localStorage.getItem('carrello')) || [];
+            carrello.push({ nome, prezzo });
+            localStorage.setItem('carrello', JSON.stringify(carrello));
+            alert(`${nome} è stato aggiunto al carrello.`);
+        }
+    </script>
+
+</body>
+
+</html>

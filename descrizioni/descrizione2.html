@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Descrizione Prodotto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dettagli AirPods Pro (4a generazione)</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pagine/prodotti.html">Prodotti</a>
+        <a href="../pagine/offerte.html">Offerte</a>
+        <a href="../pagine/carrello.html">Carrello</a>
+        <a href="../pagine/contatti.html">Contatti</a>
+    </nav>
+
+    <main>
+        <section class="intro-section">
+            <p>Scopri tutte le informazioni su questo prodotto selezionato per te.</p>
+        </section>
+
+        <section class="product-detail">
+            <div class="product-image">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-hero-select-202409_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=NFNYUnZEZG9WdmVKZzdXRW9IVzNoSXFGRDgrV1lYUUJja0JzaUZERUtaV0xlT0luZStNbmdWL2hzZnEwaHZYMnNudUNUdVBZcDJSbEgrd2pPbDFhNVk4Y0dKOSsweEZka1JxVzk5SFNyRjIrUm8xd3BPWU43Z0lDcmhIa0FsS0o"
+                    alt="Prodotto Dettaglio">
+            </div>
+
+            <div class="product-info">
+                <h2>AirPods Pro (4a generazione)</h2>
+                <p class="price">€109.99</p>
+                <ul class="class-description">
+                    <li>Nuovo chip Apple H3 per prestazioni audio avanzate</li>
+                    <li>Cancellazione attiva del rumore (ANC) migliorata e modalità Trasparenza adattiva</li>
+                    <li>Audio adattivo che regola in tempo reale l’intensità del suono</li>
+                    <li>Driver personalizzati per bassi profondi e suono più dettagliato</li>
+                    <li>Rilevamento della conversazione automatico</li>
+                    <li>Fino a 6 ore di ascolto con una ricarica, 30 ore totali con custodia</li>
+                    <li>Custodia di ricarica MagSafe con USB-C e funzione Dov’è</li>
+                    <li>Controllo touch per volume, chiamate e contenuti multimediali</li>
+                    <li>Resistenti ad acqua e sudore (IP54)</li>
+                    <li>Compatibili con audio spaziale personalizzato e tracciamento dinamico della testa</li>
+                </ul>
+                <button onclick="aggiungiAlCarrello('Nome del Prodotto', 49.99)">Aggiungi al carrello</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Il Tuo Shop. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        function aggiungiAlCarrello(nome, prezzo) {
+            let carrello = JSON.parse(localStorage.getItem('carrello')) || [];
+            carrello.push({ nome, prezzo });
+            localStorage.setItem('carrello', JSON.stringify(carrello));
+            alert(`${nome} è stato aggiunto al carrello.`);
+        }
+    </script>
+
+</body>
+
+</html>

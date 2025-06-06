@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Descrizione Prodotto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dettagli Prodotto</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pagine/prodotti.html">Prodotti</a>
+        <a href="../pagine/offerte.html">Offerte</a>
+        <a href="../pagine/carrello.html">Carrello</a>
+        <a href="../pagine/contatti.html">Contatti</a>
+    </nav>
+
+    <main>
+        <section class="intro-section">
+            <p>Scopri tutte le informazioni su questo prodotto selezionato per te.</p>
+        </section>
+
+        <section class="product-detail">
+            <div class="product-image">
+                <img src="https://static.comet.it/b2c/public/e-cat/APL037064/APL037064-24b05e2aa9-0.jpg"
+                    alt="Prodotto Dettaglio">
+            </div>
+
+            <div class="product-info">
+                <h2>Iphone 16</h2>
+                <p class="price">€499.99</p>
+                <ul class="class-description">
+                    <li>Chip A18 Pro con Neural Engine di nuova generazione</li>
+                    <li>Display Super Retina XDR OLED da 6,3" (Pro) / 6,9" (Pro Max)</li>
+                    <li>Nuova fotocamera da 48MP con AI per fotografia intelligente</li>
+                    <li>Modalità “Always On” e ProMotion 120Hz</li>
+                    <li>Fino a 29 ore di autonomia video (Pro Max)</li>
+                    <li>Ricarica MagSafe e USB-C</li>
+                    <li>iOS 18 con funzioni AI integrate</li>
+                    <li>Design in titanio e vetro rinforzato</li>
+                </ul>
+
+                <button onclick="aggiungiAlCarrello('Nome del Prodotto', 49.99)">Aggiungi al carrello</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Il Tuo Shop  . Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        function aggiungiAlCarrello(nome, prezzo) {
+            let carrello = JSON.parse(localStorage.getItem('carrello')) || [];
+            carrello.push({ nome, prezzo });
+            localStorage.setItem('carrello', JSON.stringify(carrello));
+            alert(`${nome} è stato aggiunto al carrello.`);
+        }
+    </script>
+
+</body>
+
+</html>
